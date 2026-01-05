@@ -23,7 +23,7 @@ const aspectRatioClasses = {
 export default function Image({
   src,
   alt,
-  fallback = '/images/placeholder.jpg',
+  fallback = '/images/placeholder.svg',
   className,
   aspectRatio = 'square',
   objectFit = 'cover',

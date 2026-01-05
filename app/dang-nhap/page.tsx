@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Header from '@/components/Header'
-import FooterClient from '@/components/FooterClient'
+import FooterLite from '@/components/FooterLite'
 import LoginModal from '@/components/LoginModal'
 import Link from 'next/link'
 
@@ -101,7 +101,7 @@ export default function DangNhapPage() {
         </div>
       </div>
 
-      <FooterClient />
+      <FooterLite />
     </main>
   )
 }

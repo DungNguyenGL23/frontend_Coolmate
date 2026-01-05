@@ -2,7 +2,12 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Search, User, ShoppingCart, Menu, ChevronDown, X } from 'lucide-react'
+import { 
+  Search, User, ShoppingCart, Menu, ChevronDown, X, 
+  Activity, Footprints, Target, Zap, CircleDot, Dumbbell, 
+  Waves, Mountain, Shirt, Sparkles, ShoppingBag, Heart, 
+  Award, ArrowRight
+} from 'lucide-react'
 import { FaFacebook, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa'
 
 export default function Header() {
@@ -188,32 +193,32 @@ export default function Header() {
   }
 
   const sportsMenuNam = [
-    { label: 'Thể thao chung', href: '/the-thao/chung', icon: '🏃' },
-    { label: 'Chạy bộ', href: '/the-thao/chay-bo', icon: '🏃' },
-    { label: 'Bóng đá', href: '/the-thao/bong-da', icon: '⚽' },
-    { label: 'Cầu lông & Bóng bàn', href: '/the-thao/cau-long-bong-ban', icon: '🏸' },
-    { label: 'Pickleball', href: '/the-thao/pickleball', icon: '🎾' },
-    { label: 'Gym', href: '/the-thao/gym', icon: '💪' },
-    { label: 'Quần Bơi', href: '/the-thao/quan-boi', icon: '🏊' },
-    { label: 'Outdoor', href: '/the-thao/outdoor', icon: '🏔️' },
+    { label: 'Thể thao chung', href: '/the-thao/chung', icon: Activity, color: 'bg-blue-500' },
+    { label: 'Chạy bộ', href: '/the-thao/chay-bo', icon: Footprints, color: 'bg-green-500' },
+    { label: 'Bóng đá', href: '/the-thao/bong-da', icon: Target, color: 'bg-purple-500' },
+    { label: 'Cầu lông & Bóng bàn', href: '/the-thao/cau-long-bong-ban', icon: Zap, color: 'bg-orange-500' },
+    { label: 'Pickleball', href: '/the-thao/pickleball', icon: CircleDot, color: 'bg-pink-500' },
+    { label: 'Gym', href: '/the-thao/gym', icon: Dumbbell, color: 'bg-red-500' },
+    { label: 'Quần Bơi', href: '/the-thao/quan-boi', icon: Waves, color: 'bg-cyan-500' },
+    { label: 'Outdoor', href: '/the-thao/outdoor', icon: Mountain, color: 'bg-amber-500' },
   ]
 
   const sportsMenuNu = [
-    { label: 'Pickleball', href: '/the-thao/pickleball-nu', icon: '🎾' },
-    { label: '#2 Amazon Best Seller', href: '/the-thao/best-seller', icon: '👟' },
-    { label: 'Chạy bộ', href: '/the-thao/chay-bo-nu', icon: '🏃' },
-    { label: 'Áo thể thao nữ', href: '/the-thao/ao-nu', icon: '👕' },
-    { label: 'Thể thao chung', href: '/the-thao/chung-nu', icon: '🤸' },
-    { label: 'Quần thể thao nữ', href: '/the-thao/quan-nu', icon: '👖' },
-    { label: 'Yoga & Pilates', href: '/the-thao/yoga-pilates', icon: '🧘' },
-    { label: 'Váy Thể Thao', href: '/the-thao/vay-the-thao', icon: '👗' },
-    { label: 'Gym', href: '/the-thao/gym-nu', icon: '💪' },
-    { label: 'Phụ kiện thể thao nữ', href: '/the-thao/phu-kien-nu', icon: '💧' },
+    { label: 'Pickleball', href: '/the-thao/pickleball-nu', icon: CircleDot, color: 'bg-pink-500' },
+    { label: '#2 Amazon Best Seller', href: '/the-thao/best-seller', icon: Award, color: 'bg-yellow-500' },
+    { label: 'Chạy bộ', href: '/the-thao/chay-bo-nu', icon: Footprints, color: 'bg-green-500' },
+    { label: 'Áo thể thao nữ', href: '/the-thao/ao-nu', icon: Shirt, color: 'bg-blue-500' },
+    { label: 'Thể thao chung', href: '/the-thao/chung-nu', icon: Activity, color: 'bg-purple-500' },
+    { label: 'Quần thể thao nữ', href: '/the-thao/quan-nu', icon: ShoppingBag, color: 'bg-indigo-500' },
+    { label: 'Yoga & Pilates', href: '/the-thao/yoga-pilates', icon: Heart, color: 'bg-rose-500' },
+    { label: 'Váy Thể Thao', href: '/the-thao/vay-the-thao', icon: Sparkles, color: 'bg-fuchsia-500' },
+    { label: 'Gym', href: '/the-thao/gym-nu', icon: Dumbbell, color: 'bg-red-500' },
+    { label: 'Phụ kiện thể thao nữ', href: '/the-thao/phu-kien-nu', icon: ShoppingBag, color: 'bg-teal-500' },
   ]
 
   const renderMegaMenu = (menuData: typeof namMegaMenu | typeof nuMegaMenu) => {
     return (
-      <div className="absolute top-full left-0 mt-2 bg-white shadow-2xl border rounded-lg py-6 w-[900px] max-h-[600px] overflow-y-auto">
+      <div className="absolute top-full left-0 bg-white shadow-2xl border rounded-lg pt-4 pb-6 w-[900px] max-h-[600px] overflow-y-auto">
         <div className="grid grid-cols-5 gap-6 px-6">
           {/* Menu Columns */}
           <div className="col-span-4 grid grid-cols-4 gap-6">
@@ -346,41 +351,57 @@ export default function Header() {
                 
                 {/* Sports Menu Dropdown */}
                 {item.isSportsMenu && activeDropdown === item.href && (
-                  <div className="absolute top-full left-0 mt-2 bg-white shadow-2xl border rounded-lg py-6 w-[800px]">
+                  <div className="absolute top-full left-0 bg-white shadow-2xl border rounded-lg pt-4 pb-6 w-[800px]">
                     <div className="grid grid-cols-3 gap-6 px-6">
                       {/* Left: Men's Sports */}
                       <div>
-                        <h4 className="font-bold mb-4 text-sm">THỂ THAO NAM</h4>
+                        <h4 className="font-bold mb-4 text-sm flex items-center gap-2">
+                          THỂ THAO NAM
+                          <ArrowRight className="w-4 h-4 text-gray-400" />
+                        </h4>
                         <div className="space-y-2">
-                          {sportsMenuNam.map((subItem) => (
-                            <Link
-                              key={subItem.href}
-                              href={subItem.href}
-                              className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-100 rounded transition-colors"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              <span className="text-lg">{subItem.icon}</span>
-                              <span>{subItem.label}</span>
-                            </Link>
-                          ))}
+                          {sportsMenuNam.map((subItem) => {
+                            const IconComponent = subItem.icon
+                            return (
+                              <Link
+                                key={subItem.href}
+                                href={subItem.href}
+                                className="flex items-center gap-3 px-3 py-2.5 text-sm hover:bg-gray-50 rounded-lg transition-all group"
+                                onClick={() => setActiveDropdown(null)}
+                              >
+                                <div className={`w-10 h-10 rounded-full ${subItem.color} flex items-center justify-center text-white shadow-sm group-hover:scale-110 transition-transform`}>
+                                  <IconComponent className="w-5 h-5" />
+                                </div>
+                                <span className="flex-1 group-hover:text-blue-600 transition-colors">{subItem.label}</span>
+                              </Link>
+                            )
+                          })}
                         </div>
                       </div>
                       
                       {/* Center: Women's Sports */}
                       <div>
-                        <h4 className="font-bold mb-4 text-sm">THỂ THAO NỮ</h4>
+                        <h4 className="font-bold mb-4 text-sm flex items-center gap-2">
+                          THỂ THAO NỮ
+                          <ArrowRight className="w-4 h-4 text-gray-400" />
+                        </h4>
                         <div className="space-y-2">
-                          {sportsMenuNu.map((subItem) => (
-                            <Link
-                              key={subItem.href}
-                              href={subItem.href}
-                              className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-100 rounded transition-colors"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              <span className="text-lg">{subItem.icon}</span>
-                              <span>{subItem.label}</span>
-                            </Link>
-                          ))}
+                          {sportsMenuNu.map((subItem) => {
+                            const IconComponent = subItem.icon
+                            return (
+                              <Link
+                                key={subItem.href}
+                                href={subItem.href}
+                                className="flex items-center gap-3 px-3 py-2.5 text-sm hover:bg-gray-50 rounded-lg transition-all group"
+                                onClick={() => setActiveDropdown(null)}
+                              >
+                                <div className={`w-10 h-10 rounded-full ${subItem.color} flex items-center justify-center text-white shadow-sm group-hover:scale-110 transition-transform`}>
+                                  <IconComponent className="w-5 h-5" />
+                                </div>
+                                <span className="flex-1 group-hover:text-blue-600 transition-colors">{subItem.label}</span>
+                              </Link>
+                            )
+                          })}
                         </div>
                       </div>
                       

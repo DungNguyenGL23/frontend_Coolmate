@@ -38,7 +38,7 @@ export default function ProductCard({
       {/* Product Image */}
       <Link href={product.link} className="block relative aspect-square overflow-hidden">
         <Image
-          src={product.image || '/images/placeholder.jpg'}
+          src={product.image || '/images/placeholder.svg'}
           alt={product.name}
           aspectRatio="square"
           objectFit="cover"

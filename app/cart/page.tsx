@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
-import FooterClient from '@/components/FooterClient'
+import FooterLite from '@/components/FooterLite'
 import LoginModal from '@/components/LoginModal'
 import Link from 'next/link'
 
@@ -153,7 +153,7 @@ export default function CartPage() {
         )}
       </div>
 
-      <FooterClient />
+      <FooterLite />
     </main>
   )
 }

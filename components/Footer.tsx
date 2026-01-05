@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { contentService } from '@/services/content.service'
 import { FaFacebook, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa'
-import { Phone, Mail } from 'lucide-react'
+import { Phone, Mail, MessageCircle } from 'lucide-react'
 
 export default async function Footer() {
   const footerSections = await contentService.getFooterSections()
@@ -9,7 +9,7 @@ export default async function Footer() {
 
   const socialIcons = {
     facebook: FaFacebook,
-    zalo: FaFacebook, // Zalo icon có thể cần custom
+    zalo: MessageCircle, // Icon chat tròn cho Zalo
     tiktok: FaTiktok,
     instagram: FaInstagram,
     youtube: FaYoutube,

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
-import FooterClient from '@/components/FooterClient'
+import FooterLite from '@/components/FooterLite'
 import FloatingWidget from '@/components/FloatingWidget'
 import LoginModal from '@/components/LoginModal'
 import Link from 'next/link'
@@ -265,7 +265,7 @@ export default function CheckoutPage() {
         </div>
       </div>
 
-      <FooterClient />
+      <FooterLite />
     </main>
   )
 }
