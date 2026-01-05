@@ -64,6 +64,9 @@ export default async function Footer() {
                 {Object.entries(contactInfo.socialMedia).map(([platform, url]) => {
                   const Icon = socialIcons[platform as keyof typeof socialIcons]
                   if (!Icon || !url) return null
+
+                  const isZalo = platform === 'zalo'
+
                   return (
                     <a
                       key={platform}
@@ -73,7 +76,15 @@ export default async function Footer() {
                       className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors"
                       aria-label={platform}
                     >
-                      <Icon className="w-5 h-5" />
+                      {isZalo ? (
+                        <img
+                          src="/Icon_of_Zalo.svg.webp"
+                          alt="Zalo"
+                          className="w-8 h-8 rounded-[15px] object-contain"
+                        />
+                      ) : (
+                        <Icon className="w-5 h-5" />
+                      )}
                     </a>
                   )
                 })}
