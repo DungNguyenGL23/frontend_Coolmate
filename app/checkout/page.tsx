@@ -58,7 +58,7 @@ export default function CheckoutPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <Link
-              href="/coolclub/dang-ky"
+              href="/dang-ky"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap"
             >
               GIA NHẬP COOLCLUB NGAY

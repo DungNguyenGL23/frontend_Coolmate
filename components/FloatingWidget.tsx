@@ -14,11 +14,9 @@ export default function FloatingWidget() {
           <div className="mb-3 flex flex-col items-end gap-3">
             {/* Zalo bubble */}
             <a
-              href="https://zalo.me/coolmate"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/coming-soon/zalo"
               className="w-14 h-14 rounded-full bg-white border border-blue-100 shadow-lg flex items-center justify-center"
-              aria-label="Chat Zalo"
+              aria-label="Chat Zalo (Coming soon)"
             >
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white text-sm font-semibold">
                 Zalo
@@ -27,9 +25,9 @@ export default function FloatingWidget() {
 
             {/* Hotline bubble */}
             <a
-              href="tel:1900272737"
+              href="/coming-soon/hotline"
               className="w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
-              aria-label="Gọi hotline"
+              aria-label="Gọi hotline (Coming soon)"
             >
               <Phone className="w-7 h-7" />
             </a>

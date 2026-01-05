@@ -36,7 +36,7 @@ export default function CoolClubPage() {
             <h2 className="text-2xl font-bold mb-4">Đăng ký thành viên ngay</h2>
             <p className="mb-6">Nhận ngay nhiều ưu đãi hấp dẫn khi trở thành thành viên CoolClub</p>
             <Link
-              href="/dang-ky-coolclub"
+              href="/dang-ky"
               className="bg-white text-blue-600 px-8 py-3 rounded font-semibold hover:bg-gray-100 transition-colors inline-block"
             >
               Đăng ký ngay

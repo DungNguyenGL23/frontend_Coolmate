@@ -158,11 +158,11 @@ export const getContentConfig = async (): Promise<ContentConfig> => {
         },
       },
       socialMedia: {
-        facebook: 'https://facebook.com/coolmate',
-        zalo: 'https://zalo.me/coolmate',
-        tiktok: 'https://tiktok.com/@coolmate',
-        instagram: 'https://instagram.com/coolmate',
-        youtube: 'https://youtube.com/coolmate',
+        facebook: '/coming-soon/facebook',
+        zalo: '/coming-soon/zalo',
+        tiktok: '/coming-soon/tiktok',
+        instagram: '/coming-soon/instagram',
+        youtube: '/coming-soon/youtube',
       },
     },
     footer: {
@@ -171,7 +171,7 @@ export const getContentConfig = async (): Promise<ContentConfig> => {
           title: 'CoolClub',
           links: [
             { label: 'Tài khoản CoolClub', href: '/coolclub/tai-khoan' },
-            { label: 'Đăng kí thành viên', href: '/coolclub/dang-ky' },
+            { label: 'Đăng kí thành viên', href: '/dang-ky' },
             { label: 'Ưu đãi & Đặc quyền', href: '/coolclub/uu-dai' },
           ],
         },

@@ -56,7 +56,7 @@ export default function CoolClubCards() {
             </p>
           </div>
           <Link
-            href="/coolclub/dang-ky"
+            href="/dang-ky"
             className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center gap-2 whitespace-nowrap"
           >
             GIA NHẬP COOLCLUB NGAY
